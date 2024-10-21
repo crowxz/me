@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+#black-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5) url('bg.gif') no-repeat center center fixed;    color: white;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-transform: lowercase;
+    cursor: pointer;
+    text-shadow:
+    0 0 5px #d3a7e1, 
+    0 0 10px #d3a7e1, 
+    0 0 15px #b56bbf, 
+    0 0 20px #b56bbf, 
+    0 0 30px #9b4d9c, 
+    0 0 40px #9b4d9c, 
+    0 0 50px #9b4d9c;
+    z-index: 10;
+    opacity: 0.5;
+    transition: opacity 0.1s ease-out;
+}
+
+#main-content {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background: url('bg.gif') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    opacity: 0;
+    transition: opacity 0.1s ease-in;
+    visibility: hidden;
+}
+
+#main-content.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#black-screen.fade-out {
+    opacity: 0; 
+    pointer-events: none;
+}
+
+#main-content .container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 150px;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.name h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin: 0;
+    text-shadow:
+    0 0 40px #ffff, 
+    0 0 50px #ffff;
+}
+
+.description p {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 5px 0 0 0;
+    margin-bottom: 15px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+}
+
+.social-button {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    filter: brightness(0) invert(1);
+    text-shadow:
+    0 0 40px #ffff, 
+    0 0 50px #ffff;
+}
+
+.social-button img {
+    width: 40px; 
+    height: 40px; 
+    display: block;
+}
